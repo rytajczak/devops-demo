@@ -1,8 +1,6 @@
 import { expect, test } from "vitest";
+import { AddNumbers } from ".";
 
-test("server returns hello world text", async () => {
-  const res = await fetch("http://localhost:3000/");
-  const body = await res.json();
-
-  expect(body.msg).toEqual("hello, world!");
+test("addNumbers 1 + 2 result in 3", () => {
+  expect(AddNumbers(1, 2)).eq(3);
 });
